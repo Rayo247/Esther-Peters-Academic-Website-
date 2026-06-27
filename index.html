@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esther Peters | Cybersecurity Portfolio</title>
+  <meta name="description" content="Academic portfolio and student planner for Esther Peters, Cybersecurity student at Miva Open University.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Esther Peters
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Me</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="planner.html" class="nav-link">Academic Planner</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="theme-toggle">
+        <button class="theme-btn active" data-theme="dark" title="Dark Theme">🌙</button>
+        <button class="theme-btn" data-theme="light" title="Light Theme">☀️</button>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main>
+    <section class="hero-section">
+      <div class="hero-content">
+        <span class="hero-greeting">Welcome to my Digital Academic Space</span>
+        <h1 class="hero-title">Hi, I'm <span>Esther Peters</span></h1>
+        <div class="hero-subtitle">
+          <span id="typed-text"></span><span class="typing-cursor"></span>
+        </div>
+        <p style="margin-bottom: 2rem;">
+          I am a dedicated cybersecurity student focused on protecting environments, systems, and networks. Discover my academic logs, projects, and manage tasks using the interactive dashboard.
+        </p>
+
+        <!-- Dynamic Statistics -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">4.88</div>
+            <div class="stat-label">Current CGPA</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">3</div>
+            <div class="stat-label">Completed Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">6 hrs</div>
+            <div class="stat-label">Study / Day</div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="planner.html" class="btn btn-primary">Go to Academic Planner</a>
+          <a href="about.html" class="btn btn-secondary">Learn More About Me</a>
+        </div>
+      </div>
+      
+      <div class="hero-avatar-container animate-fade">
+        <div class="hero-avatar-glow"></div>
+        <img class="hero-avatar" src="assets/esther.png" alt="Portrait headshot of Esther Peters, Cybersecurity Student">
+      </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="biography" style="border-top: 1px solid var(--border-color);">
+      <div class="grid-2" style="align-items: center; gap: 4rem;">
+        <div>
+          <h2 style="font-size: 2rem; margin-bottom: 1.5rem; position: relative;">
+            Brief Biography
+            <span style="display:block; width:40px; height:3px; background:var(--accent-1); margin-top:0.4rem;"></span>
+          </h2>
+          <p style="margin-bottom: 1.2rem; font-size: 1.05rem; line-height: 1.7; text-align: justify;">
+            I am a dedicated Cybersecurity student with a strong interest in digital security, technology, and problem-solving. My academic pursuits focus on developing knowledge in cybersecurity, network security, threat analysis, and information protection. 
+          </p>
+          <p style="margin-bottom: 1.2rem; font-size: 1.05rem; line-height: 1.7; text-align: justify;">
+            I am passionate about understanding how technology works and how organizations can safeguard their systems and data from cyber threats. Driven by a commitment to continuous learning and professional growth, I aspire to build a successful career as a Cybersecurity Analyst, contributing to the security and resilience of digital environments.
+          </p>
+        </div>
+        <div class="glass-card" style="padding: 2rem;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1.2rem; color: var(--accent-2);">Professional Background</h3>
+          <p style="margin-bottom: 1rem; font-size: 0.95rem;">
+            Alongside my academic studies, I have established practical expertise in digital administrative workflows:
+          </p>
+          <ul style="list-style-type: none; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li style="display: flex; gap: 0.8rem; font-size: 0.95rem; color: var(--text-primary);">
+              <span style="color: var(--accent-1);">✔</span> <strong>Virtual Assistant:</strong> Executive administrative support, email organization, and task scheduling.
+            </li>
+            <li style="display: flex; gap: 0.8rem; font-size: 0.95rem; color: var(--text-primary);">
+              <span style="color: var(--accent-1);">✔</span> <strong>Social Media Manager:</strong> Visual content curation, branding coordination, and growth strategies.
+            </li>
+            <li style="display: flex; gap: 0.8rem; font-size: 0.95rem; color: var(--text-primary);">
+              <span style="color: var(--accent-1);">✔</span> <strong>Customer Engagement:</strong> Resolution support, customer onboarding, and query validation.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Page Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="planner.html">Academic Planner</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-links" aria-label="Social media links">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 5.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5Zm6.75-1.25a1.25 1.25 0 1 0 1.25 1.25 1.25 1.25 0 0 0-1.25-1.25Z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V3.9c0-.9.3-1.5 1.5-1.5h1.6V.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.3v8h3.2Z"/></svg>
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.6 2 12.22c0 4.5 2.87 8.32 6.84 9.68.5.1.68-.22.68-.48v-1.7c-2.78.62-3.37-1.35-3.37-1.35-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.54 2.33 1.1 2.9.84.09-.66.35-1.1.63-1.35-2.22-.25-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.25-.45-1.28.1-2.67 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 2.5-.34c.85 0 1.7.11 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.39.2 2.42.1 2.67.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.31.68.92.68 1.86v2.76c0 .27.18.59.69.49A10.23 10.23 0 0 0 22 12.22C22 6.6 17.52 2 12 2Z"/></svg>
+        </a>
+      </div>
+      <p class="copyright">&copy; 2026 Esther Peters. All rights reserved. Designed for Academic Assessment.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/voice.js"></script>
+</body>
+</html>

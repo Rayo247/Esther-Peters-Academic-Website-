@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Esther Peters</title>
+  <meta name="description" content="Academic and cybersecurity projects completed by Esther Peters.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Esther Peters
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Me</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="planner.html" class="nav-link">Academic Planner</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="theme-toggle">
+        <button class="theme-btn active" data-theme="dark" title="Dark Theme">🌙</button>
+        <button class="theme-btn" data-theme="light" title="Light Theme">☀️</button>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="animate-fade">
+      <div class="section-header">
+        <h1 class="section-title">Projects</h1>
+        <p class="section-subtitle">Practical applications of security principles and interface design</p>
+      </div>
+
+      <!-- Video Showcase of Primary Project -->
+      <div class="showcase-section">
+        <div class="video-wrapper">
+          <video controls poster="assets/project.png">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-cyber-security-system-animation-48568-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div>
+          <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-2); font-weight: 600;">Featured Video Showcase</span>
+          <h2 style="font-size: 1.8rem; margin: 0.5rem 0 1rem;">Academic Website Demo</h2>
+          <p style="margin-bottom: 1.2rem; font-size: 0.95rem; text-align: justify;">
+            This video demonstrates the core features of the <strong>Esther Peters Portfolio Platform</strong>. Explore how the application integrates dark-themed slate glassmorphic layouts, live-recorded microphones storing chunks in IndexedDB, dynamic skill timelines, and real-time DOM-rendering databases inside the task planner.
+          </p>
+          <div style="display: flex; gap: 1rem;">
+            <a href="planner.html" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Try Task Planner</a>
+            <a href="contact.html" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Send Message</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="program">Programming</button>
+        <button class="filter-btn" data-filter="canva">Canva Design</button>
+
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="projects-grid" id="project-list">
+        
+        <!-- Project 1 (Website) -->
+        <article class="glass-card project-card" data-category="web">
+          <div class="project-img-wrapper">
+            <img class="project-img" src="assets/Project.png" alt="Esther Peters Academic Website screenshot">
+          </div>
+          <div class="project-details">
+            <h3 style="font-size: 1.2rem;">Academic Website & Portfolio</h3>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem; text-align: justify;">
+              A responsive multi-page academic hub and personal portfolio built using semantic HTML5, glassmorphism CSS, and vanilla JS. It features a microphone voice recorder with IndexedDB storage, dynamic skill animations, a persistent academic task manager, and full contact form verification.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS Grid</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="index.html" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; flex: 1;">View Home</a>
+              <a href="https://github.com/Rayo247/academic-portfolio" target="_blank" class="btn btn-primary" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; flex: 1;">Repo Link</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 (C Programming) -->
+        <article class="glass-card project-card" data-category="program">
+          <div class="project-img-wrapper">
+            <img class="project-img" src="assets/COS102 PROJECT.png" alt="C programming right triangle checker project screenshot">
+          </div>
+          <div class="project-details">
+            <h3 style="font-size: 1.2rem;">COS 102 C Programming Project</h3>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem; text-align: justify;">
+              This COS 102 assignment focuses on writing a C program that checks whether two given angles can form a right triangle. It highlights logical decision-making, user input handling, and basic programming structure in C.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C Programming</span>
+              <span class="tech-tag">Conditionals</span>
+              <span class="tech-tag">Problem Solving</span>
+              <span class="tech-tag">Logic Building</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 (Hangout Event Ticket System) -->
+        <article class="glass-card project-card" data-category="canva">
+          <div class="project-img-wrapper">
+            <img class="project-img" src="assets/Project 3.png" alt="Hangout event ticket system screenshot">
+          </div>
+          <div class="project-details">
+            <h3 style="font-size: 1.2rem;">Hangout Event Ticket System</h3>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem; text-align: justify;">
+              A system designed to create and manage event entry for a social hangout. Users can enter the event venue with the personalized tickets with event details, attendee information, and QR codes for easy check-ins.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Canva</span>
+            </div>
+          </div>
+        </article>
+      </div>  
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="planner.html">Academic Planner</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-links" aria-label="Social media links">
+        <a href="https://www.instagram.com/rhayoh/24/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 5.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5Zm6.75-1.25a1.25 1.25 0 1 0 1.25 1.25 1.25 1.25 0 0 0-1.25-1.25Z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V3.9c0-.9.3-1.5 1.5-1.5h1.6V.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.3v8h3.2Z"/></svg>
+        </a>
+        <a href="https://github.com/rayo247" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.6 2 12.22c0 4.5 2.87 8.32 6.84 9.68.5.1.68-.22.68-.48v-1.7c-2.78.62-3.37-1.35-3.37-1.35-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.54 2.33 1.1 2.9.84.09-.66.35-1.1.63-1.35-2.22-.25-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.25-.45-1.28.1-2.67 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 2.5-.34c.85 0 1.7.11 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.39.2 2.42.1 2.67.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.31.68.92.68 1.86v2.76c0 .27.18.59.69.49A10.23 10.23 0 0 0 22 12.22C22 6.6 17.52 2 12 2Z"/></svg>
+        </a>
+      </div>
+      <p class="copyright">&copy; 2026 Esther Peters.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

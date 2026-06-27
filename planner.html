@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Planner | Esther Peters</title>
+  <meta name="description" content="Interactive academic planner and task manager for cybersecurity studies.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Esther Peters
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Me</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="planner.html" class="nav-link">Academic Planner</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="theme-toggle">
+        <button class="theme-btn active" data-theme="dark" title="Dark Theme">🌙</button>
+        <button class="theme-btn" data-theme="light" title="Light Theme">☀️</button>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="animate-fade">
+      <div class="section-header">
+        <h1 class="section-title">Academic Planner</h1>
+        <p class="section-subtitle">Track, schedule, and complete assignments and security labs</p>
+      </div>
+
+      <!-- Dashboard Layout -->
+      <div class="planner-dashboard">
+        
+        <!-- Sidebar Controls & Form -->
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          
+          <!-- Analytics Widget -->
+          <div class="glass-card" style="padding: 1.5rem;">
+            <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: #fff;">Study Progress</h3>
+            <div class="analytics-panel">
+              <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span id="completion-stats">0 of 0 tasks completed</span>
+                <span id="completion-pct" style="color: var(--accent-1); font-weight: 600;">0%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progress-bar"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add Task Form -->
+          <div class="glass-card" style="padding: 2rem;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1.5rem; color: var(--accent-1);">Add Academic Task</h3>
+            <form id="task-form">
+              <div class="form-group">
+                <label for="task-name">Task Name</label>
+                <input type="text" id="task-name" class="input-field" placeholder="e.g. Network Sniffing Lab Report" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="task-category">Category</label>
+                <select id="task-category" class="input-field" style="appearance: none; background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'12\' fill=\'white\' viewBox=\'0 0 24 24\'%3E%3Cpath d=\'M7 10l5 5 5-5z\'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center;">
+                  <option value="Assignment">Assignment</option>
+                  <option value="Exam">Exam / Quiz</option>
+                  <option value="Project">Project Task</option>
+                  <option value="Lab">Security Lab</option>
+                  <option value="Study">Reading / Study</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority" class="input-field" style="appearance: none; background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'12\' fill=\'white\' viewBox=\'0 0 24 24\'%3E%3Cpath d=\'M7 10l5 5 5-5z\'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center;">
+                  <option value="high">High Priority</option>
+                  <option value="medium" selected>Medium Priority</option>
+                  <option value="low">Low Priority</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1.75rem;">
+                <label for="task-date">Due Date</label>
+                <input type="date" id="task-date" class="input-field" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Create Task</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Task List Board -->
+        <div class="planner-tasks">
+          
+          <!-- In Progress tasks list -->
+          <div class="glass-card" style="padding: 2rem;">
+            <div class="task-list-header">
+              <h3 class="task-list-title">Active Tasks</h3>
+              <span class="task-count-badge" id="active-count">0</span>
+            </div>
+            <div id="active-tasks-list">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Completed tasks list -->
+          <div class="glass-card" style="padding: 2rem;">
+            <div class="task-list-header">
+              <h3 class="task-list-title">Completed Tasks</h3>
+              <span class="task-count-badge" id="completed-count">0</span>
+            </div>
+            <div id="completed-tasks-list">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="planner.html">Academic Planner</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-links" aria-label="Social media links">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 5.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5Zm6.75-1.25a1.25 1.25 0 1 0 1.25 1.25 1.25 1.25 0 0 0-1.25-1.25Z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V3.9c0-.9.3-1.5 1.5-1.5h1.6V.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.3v8h3.2Z"/></svg>
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.6 2 12.22c0 4.5 2.87 8.32 6.84 9.68.5.1.68-.22.68-.48v-1.7c-2.78.62-3.37-1.35-3.37-1.35-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.54 2.33 1.1 2.9.84.09-.66.35-1.1.63-1.35-2.22-.25-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.25-.45-1.28.1-2.67 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 2.5-.34c.85 0 1.7.11 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.39.2 2.42.1 2.67.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.31.68.92.68 1.86v2.76c0 .27.18.59.69.49A10.23 10.23 0 0 0 22 12.22C22 6.6 17.52 2 12 2Z"/></svg>
+        </a>
+      </div>
+      <p class="copyright">&copy; 2026 Esther Peters. All rights reserved. Designed for Academic Assessment.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>
