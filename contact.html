@@ -88,33 +88,40 @@
         <div class="glass-card" style="padding: 2.5rem;">
           <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--accent-1);">Send Secure Message</h2>
           
-          <form id="contact-form" novalidate>
+          <form id="contact-form">
+            <input type="hidden" id="from-name-hidden" name="from_name">
+            <input type="hidden" id="reply-to-hidden" name="reply_to">
+            <input type="hidden" id="user-email-hidden" name="user_email">
+            <input type="hidden" id="sender-message-hidden" name="sender_message">
+
             <div class="form-group">
               <label for="user-name">Full Name</label>
-              <input type="text" id="user-name" class="input-field" placeholder="e.g. John Doe">
+              <input type="text" id="user-name" name="user-name" class="input-field" placeholder="e.g. John Doe">
               <span class="error-message" id="name-error">Name cannot be left empty.</span>
             </div>
 
             <div class="form-group">
               <label for="user-email">Email Address</label>
-              <input type="email" id="user-email" class="input-field" placeholder="e.g. johndoe@example.com">
+              <input type="email" id="user-email" name="user-email" class="input-field" placeholder="e.g. johndoe@example.com">
               <span class="error-message" id="email-error">Please supply a valid email address.</span>
             </div>
 
             <div class="form-group">
               <label for="user-phone">Phone Number</label>
-              <input type="tel" id="user-phone" class="input-field" placeholder="e.g. 08012345678 (digits only)">
+              <input type="tel" id="user-phone" name="user-phone" class="input-field" placeholder="e.g. 08012345678 (digits only)">
               <span class="error-message" id="phone-error">Phone number must contain only numeric digits.</span>
             </div>
 
             <div class="form-group" style="margin-bottom: 2rem;">
               <label for="user-message">Message</label>
-              <textarea id="user-message" class="input-field" rows="5" placeholder="Write your message here..."></textarea>
+              <textarea id="user-message" name="message" class="input-field" rows="5" placeholder="Write your message here..."></textarea>
               <span class="error-message" id="message-error">Message text cannot be left empty.</span>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
           </form>
+
+          <div id="submission-summary" class="submission-summary" style="display: none;" aria-live="polite"></div>
         </div>
 
       </div>
@@ -150,6 +157,12 @@
   </footer>
    <script src="js/main.js"></script>
   <script src="js/contact.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script>
+emailjs.init({
+    publicKey: "CCzo-SyW6bn7T5KFR"
+});
+</script>
 </body>
 </html>
